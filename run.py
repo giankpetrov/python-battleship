@@ -11,7 +11,7 @@ def print_slow(str):
     for char in str:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(.075)
+        time.sleep(.005)
 
 def title():
     print("<====>  BATTLESHIP: Guadalcanal 1942  <====>\n")
@@ -32,10 +32,10 @@ def introduction_history_mode():
         "\n1 Battle Cruiser, that occupy 3 cells\n"
         "2 Heavy Cruisers, that occupy 2 cells\n"
         "4 Destroyers that occupy 1 cell each\n"
-
     ]
     for i in intro_history_mode:
         print_slow(i)
+    continue_key()
 
 def clear_screen():
     if os.name == "posix":
@@ -44,7 +44,7 @@ def clear_screen():
         os.system("clr")
 
 def continue_key():
-    input("Press Enter to continue...")
+    input("\nPress Enter to continue...")
     clear_screen()
 
 def instructions_history_mode():
@@ -62,7 +62,6 @@ def get_initial_battlefield():
 def main():
     title()
     introduction_history_mode()
-    continue_key()
     instructions_history_mode()
 
 main()
