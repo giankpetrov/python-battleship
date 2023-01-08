@@ -29,6 +29,12 @@ def introduction_history_mode():
     ]
     for i in intro_history_mode:
         print(i)
+
+def continue_key():
+    input("Press Enter to continue...")
+
+def instructions_history_mode():
+    print("instructions")
 """
 def get_initial_battlefield():
     battlefield = []
@@ -41,5 +47,7 @@ def get_initial_battlefield():
 def main():
     title()
     introduction_history_mode()
+    continue_key()
+    instructions_history_mode()
 
 main()
