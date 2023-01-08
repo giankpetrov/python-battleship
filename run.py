@@ -1,10 +1,17 @@
 import os
 import random
 import time
+import sys
 
 ROWS = 5
 COLUMNS = 5
 SEA = " "
+
+def print_slow(str):
+    for char in str:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(.075)
 
 def title():
     print("<====>  BATTLESHIP: Guadalcanal 1942  <====>\n")
@@ -28,7 +35,7 @@ def introduction_history_mode():
 
     ]
     for i in intro_history_mode:
-        print(i)
+        print_slow(i)
 
 def clear_screen():
     if os.name == "posix":
@@ -40,9 +47,9 @@ def continue_key():
     input("Press Enter to continue...")
     clear_screen()
 
-
 def instructions_history_mode():
     print("instructions")
+    continue_key()
 """
 def get_initial_battlefield():
     battlefield = []
