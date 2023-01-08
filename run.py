@@ -24,14 +24,22 @@ def introduction_history_mode():
         "We know from intelligence \nreports Japanese Vice Admiral Kondo have a fleet of:\n"
         "\n1 Battle Cruiser, that occupy 3 cells\n"
         "2 Heavy Cruisers, that occupy 2 cells\n"
-        "4 Destroyers that occupy 1 cell each"
+        "4 Destroyers that occupy 1 cell each\n"
 
     ]
     for i in intro_history_mode:
         print(i)
 
+def clear_screen():
+    if os.name == "posix":
+        os.system("clear")
+    else:
+        os.system("clr")
+
 def continue_key():
     input("Press Enter to continue...")
+    clear_screen()
+
 
 def instructions_history_mode():
     print("instructions")
