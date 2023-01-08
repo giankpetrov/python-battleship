@@ -5,7 +5,8 @@ ROWS = 5
 COLUMNS = 5
 SEA = " "
 
-print("<====>  BATTLESHIP: Guadalcanal 1942  <====>\n")
+def title():
+    print("<====>  BATTLESHIP: Guadalcanal 1942  <====>\n")
 
 def get_initial_battlefield():
     battlefield = []
@@ -16,6 +17,7 @@ def get_initial_battlefield():
     return battlefield
 
 def main():
+    title()
     introduction()
 
 main()
