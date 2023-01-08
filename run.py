@@ -5,6 +5,8 @@ ROWS = 5
 COLUMNS = 5
 SEA = " "
 
+print("<====>  BATTLESHIP: Guadalcanal 1942  <====>\n")
+
 def get_initial_battlefield():
     battlefield = []
     for y in range(ROWS):
@@ -12,3 +14,8 @@ def get_initial_battlefield():
         for x in range(COLUMNS):
             battlefield[y].append(SEA)
     return battlefield
+
+def main():
+    introduction()
+
+main()
