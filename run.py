@@ -6,7 +6,7 @@ import sys
 ROWS = 5
 COLUMNS = 5
 SEA = " "
-line_break = "\n" + str("-" * 80) + "\n"
+LINE_BREAK = "\n" + str("-" * 80) + "\n"
 
 def print_slow(str):
     for char in str:
@@ -15,7 +15,7 @@ def print_slow(str):
         time.sleep(.005)
 
 def title():
-    print("<====>  BATTLESHIP: Guadalcanal 1942  <====>")
+    print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
 
 def introduction_history_mode():
     """
@@ -24,20 +24,20 @@ def introduction_history_mode():
 
     intro_history_mode = [
         "On the night of November 14th 1942 Admiral William Halsey " +
-        "took the command of a task force \nformed of battleships USS Washington, " +
-        "USS South Dakota and 4 destroyers. The mission was to \nprotect Henderson " +
+        "took the command of \na task force formed of battleships USS Washington, " +
+        "USS South Dakota and 4 \ndestroyers. The mission: Protect Henderson " +
         "field from the Japanese Naval forces.\n"
         "\nThe Admiral has entrusted you with the command of the fleet. Sadly, after " +
-        "the first \nencounter on November 13th, we have lost track of the enemy ships. " +
-        "We know from intelligence \nreports Japanese Vice Admiral Kondo have a fleet of:\n"
+        "the \nfirst encounter on November 13th, we have lost track of the enemy ships. " +
+        "We know \nfrom intelligence reports Japanese Vice Admiral Kondo have a fleet of:\n"
         "\n1 Battle Cruiser, that occupy 3 cells\n"
         "2 Heavy Cruisers, that occupy 2 cells\n"
         "4 Destroyers that occupy 1 cell each\n"
     ]
-    print(line_break)
+    print(LINE_BREAK)
     for i in intro_history_mode:
         print_slow(i)
-    print(line_break)
+    print(LINE_BREAK)
     continue_key()
 
 def clear_screen():
@@ -68,11 +68,11 @@ def instructions_history_mode():
     ]
     clear_screen()
     title()
-    print(line_break)
+    print("\n *** INSTRUCTIONS ***")
+    print(LINE_BREAK)
     for i in instructions:
         print_slow(i)
-    print("instructions")
-    print(line_break)
+    print(LINE_BREAK)
     continue_key()
 """
 def get_initial_battlefield():
