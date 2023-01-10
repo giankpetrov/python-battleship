@@ -17,6 +17,12 @@ def print_slow(str):
 def title():
     print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
 
+def history_mode():
+    title()
+    introduction_history_mode()
+    instructions_history_mode()
+
+
 def introduction_history_mode():
     """
     Provide background story for history mode
@@ -74,7 +80,7 @@ def instructions_history_mode():
         print_slow(i)
     print(LINE_BREAK)
     continue_key()
-"""
+
 def get_initial_battlefield():
     battlefield = []
     for y in range(ROWS):
@@ -82,10 +88,35 @@ def get_initial_battlefield():
         for x in range(COLUMNS):
             battlefield[y].append(SEA)
     return battlefield
-"""
+
+def horizontal_separator():
+    for _ in range(COLUMNS+1):
+        print("+---", end="")
+    print("+")
+
+def numbers_line():
+    print("|   ", end="")
+    for x in range(COLUMNS):
+        print(f"| {x+1} ", end="")
+    print("|")
+
+def print_battlefield():
+    letra = "A"
+    for y in range(ROWS):
+        horizontal_separator()
+        print(f"| {letra} ", end="")
+        for x in range(COLUMNAS):
+            celda = matriz[y][x]
+            print(f"| {valor_real} ", end="")
+        letra = incrementar_letra(letra)
+        print("|",)  # Salto de línea
+    horizontal_separator()
+    numbers_line()
+    horizontal_separator()
+
+
+
 def main():
-    title()
-    introduction_history_mode()
-    instructions_history_mode()
+    
 
 main()
