@@ -14,6 +14,12 @@ def print_slow(str):
         sys.stdout.flush()
         time.sleep(.005)
 
+def print_slow_menu(str):
+    for char in str:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(.1)
+
 def title():
     print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
 
@@ -38,7 +44,7 @@ def introduction_history_mode():
         "We know \nfrom intelligence reports Japanese Vice Admiral Kondo have a fleet of:\n"
         "\n1 Battle Cruiser, that occupy 3 cells\n"
         "2 Heavy Cruisers, that occupy 2 cells\n"
-        "4 Destroyers that occupy 1 cell each\n"
+        "3 Destroyers that occupy 1 cell each\n"
     ]
     print(LINE_BREAK)
     for i in intro_history_mode:
@@ -115,8 +121,26 @@ def print_battlefield():
     horizontal_separator()
 
 
+def menu_options():
+    print("1. Play")
+    print("2. About")
+    print("3. Exit")
 
-def main():
-    
+def menu():
+    while True:
+        title()
+        menu_options()
+        menu_selection = input("Please, choose an option: ")             
+        if menu_selection == "1":
+            clear_screen()
+            history_mode()
+        elif menu_selection == "2":
+            about()
+        elif menu_selection == "3":
+            exit()
+        else:
+            print_slow_menu("\n *** Please, select a number from the menu ***")
+            time.sleep(2)
+            clear_screen()
 
-main()
+menu()
