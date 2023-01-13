@@ -552,46 +552,20 @@ def about():
     print(LINE_BREAK)
     print("You will go back to main menu in 4 seconds...")
 
-def get_initial_battlefield():
-    battlefield = []
-    for y in range(ROWS):
-        battlefield.append([])
-        for x in range(COLUMNS):
-            battlefield[y].append(SEA)
-    return battlefield
-
-def horizontal_separator():
-    for _ in range(COLUMNS+1):
-        print("+---", end="")
-    print("+")
-
-def numbers_line():
-    print("|   ", end="")
-    for x in range(COLUMNS):
-        print(f"| {x+1} ", end="")
-    print("|")
-
-def print_battlefield():
-    letra = "A"
-    for y in range(ROWS):
-        horizontal_separator()
-        print(f"| {letra} ", end="")
-        for x in range(COLUMNAS):
-            celda = matriz[y][x]
-            print(f"| {valor_real} ", end="")
-        letra = incrementar_letra(letra)
-        print("|",)  # Salto de línea
-    horizontal_separator()
-    numbers_line()
-    horizontal_separator()
-
-
 def menu_options():
-    print("1. Play")
-    print("2. About")
-    print("3. Exit")
+    """
+    Prints all the options from the main menu
+    """
+    print("1. History Mode")
+    print("2. Multiplayer")
+    print("3. About")
+    print("4. Exit")
 
 def menu():
+    """
+    Infinite loop that execute the functions according to the
+    selection made by the user.
+    """
     while True:
         title()
         print(LINE_BREAK)
@@ -601,11 +575,17 @@ def menu():
             clear_screen()
             history_mode()
         elif menu_selection == "2":
-            about()
+            MULTIPLAYER()
         elif menu_selection == "3":
+            clear_screen()
+            about()
+            time.sleep(5)
+            clear_screen()
+            menu()
+        elif menu_selection == "4":
             exit()
         else:
-            print_slow_menu("\n *** Please, select a number from the menu ***")
+            print_slow("\n *** Please, select a number from the menu ***")
             time.sleep(2)
             clear_screen()
 
