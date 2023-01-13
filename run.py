@@ -458,21 +458,20 @@ def introduction_history_mode():
         print_slow(i)
     print(LINE_BREAK)
     continue_key()
-    
+
 def instructions_history_mode():
     """
     Intructions to play the game
     """
 
     instructions = [
-        "You must input two coordinates in order to select the" +
+        "You must input two coordinates in order to select the " +
         "grid you want to fire upon:\n" +
-        "\n1. Select the grid ROW by choosing a NUMBER" +
-        "\n2. Select the grid COLUMN by choosing a LETTER\n" +
+        "\n1. Select the grid ROW by choosing a LETTER" +
+        "\n2. Select the grid COLUMN by choosing a NUMBER\n" +
         "\n* If a ship is within the grid coordinates you have selected, " +
-        "a hit will be \nregistered.",
-        "\n* If the grid is empty, it will be registered as a miss"
-
+        "a hit will be \nregistered and you will continue your turn.",
+        "\n* If the grid is empty, it will be registered as a miss."
     ]
     clear_screen()
     title()
