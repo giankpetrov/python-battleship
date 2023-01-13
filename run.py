@@ -40,6 +40,18 @@ def print_slow(str):
         sys.stdout.flush()
         time.sleep(.005)
 
+def continue_key():
+    """
+    Allows the user to continue by pressing enter
+    """
+    input("\nPress Enter to continue...")
+
+def continue_key_history():
+    """
+    Allows the user to continue by pressing enter
+    """
+    input("\nPress Enter to reload and continue...")
+    
 def history_mode():
     title()
     introduction_history_mode()
