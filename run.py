@@ -542,6 +542,16 @@ def game_history_mode():
             current_turn = P_1
     clear_screen()
 
+def about():
+    """
+    Prints a brief credit to the autor
+    """
+    title()
+    print(LINE_BREAK)
+    print_slow("This game was developed by Gianncarlo Ciampaglia")
+    print(LINE_BREAK)
+    print("You will go back to main menu in 4 seconds...")
+
 def get_initial_battlefield():
     battlefield = []
     for y in range(ROWS):
