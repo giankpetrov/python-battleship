@@ -363,6 +363,15 @@ def DEFEAT_history(player):
     print(
         f"Captain we should retreat. We need more shells to keep shooting.")
 
+def print_field_with_ships(field_p1, field_p2):
+    print("Showing fields with all ships on the battlefield from both players:")
+    print_battlefield(field_p1, True, P_1)
+    print_battlefield(field_p2, True, P_2)
+
+def print_field_with_ships_history(field_p2):
+    print("Final radar report will show the battleship with all ships:")
+    print_battlefield_history(field_p2, True, P_2)
+
 def history_mode():
     title()
     introduction_history_mode()
