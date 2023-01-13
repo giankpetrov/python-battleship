@@ -22,6 +22,16 @@ def title():
     """
     print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
 
+
+def clear_screen():
+    """
+    Clears the terminal
+    """
+    if os.name == "posix":
+        os.system("clear")
+    else:
+        os.system("clr")
+        
 def print_slow(str):
     for char in str:
         sys.stdout.write(char)
@@ -63,12 +73,6 @@ def introduction_history_mode():
         print_slow(i)
     print(LINE_BREAK)
     continue_key()
-
-def clear_screen():
-    if os.name == "posix":
-        os.system("clear")
-    else:
-        os.system("clr")
 
 def continue_key():
     input("Press Enter to continue...")
