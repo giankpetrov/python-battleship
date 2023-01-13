@@ -327,6 +327,12 @@ def shoot(x, y, battlefield) -> bool:
         battlefield[y][x] = GOOD_SHOOT
         return True
 
+def oponent_current_player(player):
+    if player == P_1:
+        return P_2
+    else:
+        return P_1
+
 def history_mode():
     title()
     introduction_history_mode()
