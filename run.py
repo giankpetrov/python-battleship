@@ -207,6 +207,12 @@ def print_ships_two_cells_vertically(quantity, ship_type, battlefield):
             break
     return battlefield
 
+def print_shells_left(shells_left, player):
+    print(f"Remaining shells for {player}: {shells_left}")
+
+def print_shells_left_history(shells_left, player):
+    print(f"We still have {shells_left} shells left")
+
 def history_mode():
     title()
     introduction_history_mode()
