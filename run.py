@@ -374,6 +374,8 @@ def print_field_with_ships_history(field_p2):
 
 def MULTIPLAYER():
     clear_screen()
+    instructions_history_mode()
+    clear_screen()
     shells_left_j1 = STARTING_SHELLS
     shells_left_j2 = STARTING_SHELLS
     ships_amount = 6
