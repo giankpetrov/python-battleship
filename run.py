@@ -372,6 +372,61 @@ def print_field_with_ships_history(field_p2):
     print("Final radar report will show the battleship with all ships:")
     print_battlefield_history(field_p2, True, P_2)
 
+def MULTIPLAYER():
+    clear_screen()
+    shells_left_j1 = STARTING_SHELLS
+    shells_left_j2 = STARTING_SHELLS
+    ships_amount = 6
+    field_p1, field_p2 = STARTING_BATTLEFIELD(), STARTING_BATTLEFIELD()
+    field_p1 = print_ships(
+        field_p1, ships_amount, P_1)
+    field_p2 = print_ships(
+        field_p2, ships_amount, P_2)
+    current_turn = P_1
+    print_slow("\n*** Get ready ***")
+    continue_key()
+    clear_screen()
+    title()
+    print("\n======================")
+    while True:
+        print(f"Current turn > {current_turn} \n")
+        shells_left = shells_left_j2
+        if current_turn == P_1:
+            shells_left = shells_left_j1
+        print_shells_left(shells_left, current_turn)
+        oponent_field = field_p1
+        if current_turn == P_1:
+            oponent_field = field_p2
+        print_battlefield(oponent_field, False,
+                        oponent_current_player(current_turn))
+        x, y = request_coordinates(current_turn)
+        correct = shoot(x, y, oponent_field)
+        #decrease shells depending on current turn
+        if current_turn == P_1:
+            shells_left_j1 -= 1
+        else:
+            shells_left_j2 -= 1
+
+        print_battlefield(oponent_field, False,
+                        oponent_current_player(current_turn))
+        if correct:
+            print_slow("\nYou hit a ship")
+            continue_key()
+            clear_screen()
+            if are_all_ships_sunk(oponent_field):
+                VICTORY(current_turn)
+                print_field_with_ships(field_p1, field_p2)
+                break
+        else:
+            print_slow("\nYou miss\n")
+            continue_key()
+            clear_screen()
+            if shells_left-1 <= 0:
+                DEFEAT(current_turn)
+                print_field_with_ships(field_p1, field_p2)
+                break
+            current_turn = oponent_current_player(current_turn)
+
 def history_mode():
     title()
     introduction_history_mode()
