@@ -343,6 +343,26 @@ def are_all_ships_sunk(battlefield):
     # if True we have been through all the array or battlefiel and all ships are sunk
     return True
 
+def VICTORY(player):
+    """
+    Print victory message
+    """
+    print(f"End of game\n{player} is the winner")
+
+def VICTORY_history(player):
+    """
+    Print victory message
+    """
+    print(f"We did it Captain, we defend Henderson field")
+
+def DEFEAT(player):
+    print(
+        f"End of game\n{player} has lost. No more shells remain")
+
+def DEFEAT_history(player):
+    print(
+        f"Captain we should retreat. We need more shells to keep shooting.")
+
 def history_mode():
     title()
     introduction_history_mode()
