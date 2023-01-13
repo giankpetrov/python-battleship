@@ -51,6 +51,19 @@ def continue_key_history():
     Allows the user to continue by pressing enter
     """
     input("\nPress Enter to reload and continue...")
+
+def STARTING_BATTLEFIELD():
+    """
+    Creates an array that will work as the board for the game
+    """
+    battlefield = []
+    for y in range(ROWS):
+        # We amend the Array adding the rows
+        battlefield.append([])
+        for x in range(COLUMNS):
+            # We add a cell within the row. its "SEA" by default.
+            battlefield[y].append(SEA)
+    return battlefield
     
 def history_mode():
     title()
