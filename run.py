@@ -94,6 +94,13 @@ def if_sea(x, y, battlefield):
     """
     return battlefield[y][x] == SEA
     
+def coordinates_in_range(x, y):
+    """
+    Let us know if the coordinates selected are within the range 
+    of the initial array for the battlefield
+    """
+    return x >= 0 and x <= COLUMNS-1 and y >= 0 and y <= ROWS-1
+    
 def history_mode():
     title()
     introduction_history_mode()
