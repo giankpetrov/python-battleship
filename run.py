@@ -140,6 +140,18 @@ def print_ships_history(battlefield, ships_amount, player):
     battlefield = print_ships_one_cell(ships_one_cell, DESTRUCTOR, battlefield)
     return battlefield
 
+def RANDOM_X():
+    """
+    Select a random number within the number of colums
+    """
+    return random.randint(0, COLUMNS-1)
+
+def RANDOM_Y():
+    """
+    Select a random number within the number of rows
+    """
+    return random.randint(0, ROWS-1)
+
 def history_mode():
     title()
     introduction_history_mode()
