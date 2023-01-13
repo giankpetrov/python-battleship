@@ -482,13 +482,65 @@ def instructions_history_mode():
     print(LINE_BREAK)
     continue_key()
 
-def game():
-    shells = 15
-    enemy_ships = 5
-    gamefield = get_initial_battlefield()
-    gamefield = print_ships()
-    
-
+def game_history_mode():
+    """
+    Function that execute battleship game on the Player vs Computer mode
+    """
+    clear_screen()
+    title()
+    print("\n======================")
+    shells_left_j1 = 2
+    ships_amount = 6
+    field_p2 = STARTING_BATTLEFIELD()
+    field_p2 = print_ships_history(
+        field_p2, ships_amount, P_2)
+    current_turn = P_1
+    print_slow("\n*** Get ready ***\n")
+    continue_key()
+    clear_screen()
+    title()
+    print("\n======================")
+    while True:
+        print(f"\nCaptain where should we shoot?")
+        if current_turn == P_1:
+            shells_left = shells_left_j1
+        print_shells_left_history(shells_left, current_turn)
+        if current_turn == P_1:
+            oponent_field = field_p2
+        print_battlefield_history(oponent_field, False,
+                        oponent_current_player(current_turn))
+        x, y = request_coordinates_history(current_turn)
+        correct = shoot(x, y, oponent_field)
+        #decrease shells depending on current turn
+        if current_turn == P_1:
+            if shells_left_j1 == 0:
+                DEFEAT_history(current_turn)
+                print_field_with_ships_history(field_p2)
+                continue_key()
+                break
+            shells_left_j1 -= 1
+        print_battlefield_history(oponent_field, False,
+                        oponent_current_player(current_turn))
+        if correct:
+            print_slow("\nYou hit them Captain... Well done")
+            continue_key_history()
+            clear_screen()
+            if are_all_ships_sunk(oponent_field):
+                VICTORY_history(current_turn)
+                print_field_with_ships_history(field_p2)
+                break
+        else:
+            print_slow("\nWe miss captain\n")
+            print_slow("We should try different coordinates")
+            continue_key_history()
+            clear_screen()
+            if shells_left-1 <= 0:
+                DEFEAT_history(current_turn)
+                print_field_with_ships_history(field_p2)
+                continue_key()
+                break
+            current_turn = P_1
+    clear_screen()
 
 def get_initial_battlefield():
     battlefield = []
