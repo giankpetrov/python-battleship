@@ -78,6 +78,15 @@ def print_horizontal_separator():
     for _ in range(COLUMNS+1):
         print("+---", end="")
     print("+")
+
+def print_line_with_numbers():
+    """
+    Prints the last line of the board with numbers in increments
+    """
+    print("|   ", end="")
+    for x in range(COLUMNS):
+        print(f"| {x+1} ", end="")
+    print("|")
     
 def history_mode():
     title()
