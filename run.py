@@ -48,14 +48,14 @@ def continue_key():
     """
     Allows the user to continue by pressing enter
     """
-    input("\nPress Enter to continue...")
+    input("\nPress Enter to continue...\n")
 
 
 def continue_key_history():
     """
     Allows the user to continue by pressing enter
     """
-    input("\nPress Enter to reload and continue...")
+    input("\nPress Enter to reload and continue...\n")
 
 
 def STARTING_BATTLEFIELD():
@@ -294,7 +294,7 @@ def request_coordinates(player):
     x = None
     while True:
         letter_row = input(
-            "\nChoose a letter from the board to indicate the ROW: ")
+            "\nChoose a letter from the board to indicate the ROW: \n")
         # We need a letter of 1 character, if not we continue to ask
         if len(letter_row) != 1:
             print_slow("\n *** You should select a valid option *** ")
@@ -313,7 +313,7 @@ def request_coordinates(player):
         try:
             x = int(input(
                 "\nChoose a number from the board" +
-                "to indicate the Column: "))
+                "to indicate the Column: \n"))
             if coordinates_in_range(x-1, 0):
                 x = x-1
                 break
@@ -331,7 +331,7 @@ def request_coordinates_history(player):
     x = None
     while True:
         letter_row = input(
-            "\nChoose a letter from the board to indicate the ROW: ")
+            "\nChoose a letter from the board to indicate the ROW: \n")
         # We need a letter of 1 character, if not we continue to ask
         if len(letter_row) != 1:
             print_slow("\n *** You should select a valid option *** ")
@@ -350,7 +350,7 @@ def request_coordinates_history(player):
         try:
             x = int(input(
                 "\nChoose a number from the board " +
-                "to indicate the Column: "))
+                "to indicate the Column: \n"))
             if coordinates_in_range(x-1, 0):
                 x = x-1
                 break
@@ -642,7 +642,7 @@ def menu():
         title()
         print(LINE_BREAK)
         menu_options()
-        menu_selection = input("\nPlease, choose an option: ")
+        menu_selection = input("\nPlease, choose an option: \n")
         if menu_selection == "1":
             clear_screen()
             history_mode()
