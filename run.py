@@ -426,12 +426,15 @@ def MULTIPLAYER():
                 print_field_with_ships(field_p1, field_p2)
                 break
             current_turn = oponent_current_player(current_turn)
+"""
+HISTORY MODE
+"""
 
 def history_mode():
     title()
     introduction_history_mode()
     instructions_history_mode()
-    game()
+    game_history_mode()
 
 
 def introduction_history_mode():
