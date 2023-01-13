@@ -249,6 +249,74 @@ def print_battlefield_history(battlefield, show_ships, player):
     print_line_with_numbers()
     print_horizontal_separator()
 
+def request_coordinates(player):
+    print(f"Requesting coordinates to {player}")
+    # Infinite loop until a correct option its choosen
+    y = None
+    x = None
+    while True:
+        letter_row = input(
+            "\nChoose a letter from the board to indicate the ROW: ")
+        # We need a letter of 1 character, if not we continue to ask
+        if len(letter_row) != 1:
+            print_slow("\n *** You should select a valid option *** ")
+            continue
+        # Convert the input into a upper case first
+        letter_row = letter_row.upper()
+        # We convert the input into ASCII, A = 65 B= 66 etc we substrac 65 so A = 0
+        y = ord(letter_row) - 65
+        # Check if it is within the scope
+        if coordinates_in_range(0, y):
+            break
+        else:
+            print("\nInvalid Row")
+    # Same for columns
+    while True:
+        try:
+            x = int(input("\nChoose a number from the board to indicate the Column: "))
+            if coordinates_in_range(x-1, 0):
+                x = x-1 
+                break
+            else:
+                print("\n *** The number is not valid ***")
+        except:
+            print("\n *** Please, choose a valid number")
+    return x, y
+
+def request_coordinates_history(player):
+    print(f"Requesting coordinates Captain")
+    # Infinite loop until a correct option its choosen
+    y = None
+    x = None
+    while True:
+        letter_row = input(
+            "\nChoose a letter from the board to indicate the ROW: ")
+        # We need a letter of 1 character, if not we continue to ask
+        if len(letter_row) != 1:
+            print_slow("\n *** You should select a valid option *** ")
+            continue
+        # Convert the input into a upper case first
+        letter_row = letter_row.upper()
+        # We convert the input into ASCII, A = 65 B= 66 etc we substrac 65 so A = 0
+        y = ord(letter_row) - 65
+        # Check if it is within the scope
+        if coordinates_in_range(0, y):
+            break
+        else:
+            print("\nInvalid Row")
+    # Same for columns
+    while True:
+        try:
+            x = int(input("\nChoose a number from the board to indicate the Column: "))
+            if coordinates_in_range(x-1, 0):
+                x = x-1 
+                break
+            else:
+                print("\n *** The number is not valid ***")
+        except:
+            print("\n *** Please, choose a valid number")
+    return x, y
+
 def history_mode():
     title()
     introduction_history_mode()
