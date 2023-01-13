@@ -152,6 +152,21 @@ def RANDOM_Y():
     """
     return random.randint(0, ROWS-1)
 
+def print_ships_one_cell(quantity, ship_type, battlefield):
+    """
+    Function to place one cell ships on the array if the place is fill with SEA
+    """
+    ship_placed = 0
+    while True:
+        x = RANDOM_X()
+        y = RANDOM_Y()
+        if if_sea(x, y, battlefield):
+            battlefield[y][x] = ship_type
+            ship_placed += 1
+        if ship_placed >= quantity:
+            break
+    return battlefield
+
 def history_mode():
     title()
     introduction_history_mode()
