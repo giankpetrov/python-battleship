@@ -64,6 +64,20 @@ def STARTING_BATTLEFIELD():
             # We add a cell within the row. its "SEA" by default.
             battlefield[y].append(SEA)
     return battlefield
+
+def INCREMENT(letter):
+    """
+    Function that increments the letter +1 in ASCII
+    """
+    return chr(ord(letter)+1)
+
+def print_horizontal_separator():
+    """
+    Function that prints an horizontal line to separate text or fields of the game
+    """
+    for _ in range(COLUMNS+1):
+        print("+---", end="")
+    print("+")
     
 def history_mode():
     title()
