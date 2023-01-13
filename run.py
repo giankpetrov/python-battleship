@@ -187,6 +187,26 @@ def print_ships_two_cells_horizontally(quantity, ship_type, battlefield):
             break
     return battlefield
 
+def print_ships_two_cells_vertically(quantity, ship_type, battlefield):
+    """
+    Function to place two cells ships vertically
+    starting from y and following by y+1 as the next cell
+    """
+    ship_placed = 0
+    while True:
+        x = RANDOM_X()
+        y = RANDOM_Y()
+        y2 = y+1
+        if (coordinates_in_range(x, y) and coordinates_in_range(x, y2) and 
+                if_sea(x, y, battlefield) and if_sea(x, y2, battlefield)):
+                # We add extra indentation to the conditions as per PEP8
+            battlefield[y][x] = ship_type
+            battlefield[y2][x] = ship_type
+            ship_placed += 1
+        if ship_placed >= quantity:
+            break
+    return battlefield
+
 def history_mode():
     title()
     introduction_history_mode()
