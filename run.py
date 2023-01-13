@@ -22,7 +22,6 @@ def title():
     """
     print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
 
-
 def clear_screen():
     """
     Clears the terminal
@@ -31,18 +30,15 @@ def clear_screen():
         os.system("clear")
     else:
         os.system("clr")
-        
+
 def print_slow(str):
+    """
+    Prints each char slowly
+    """
     for char in str:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(.005)
-
-def print_slow_menu(str):
-    for char in str:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(.1)
 
 def history_mode():
     title()
