@@ -213,6 +213,42 @@ def print_shells_left(shells_left, player):
 def print_shells_left_history(shells_left, player):
     print(f"We still have {shells_left} shells left")
 
+def print_battlefield(battlefield, show_ships, player):
+    print(f"This is the field for: {player}")
+    letter = "A"
+    for y in range(ROWS):
+        print_horizontal_separator()
+        print(f"| {letter} ", end="")
+        for x in range(COLUMNS):
+            CELL = battlefield[y][x]
+            real_value = CELL
+            if not show_ships and real_value != SEA and real_value != SHOT_MISSED and real_value != GOOD_SHOOT:
+                real_value = " "
+            print(f"| {real_value} ", end="")
+        letter = INCREMENT(letter)
+        print("|",)  # Line break
+    print_horizontal_separator()
+    print_line_with_numbers()
+    print_horizontal_separator()
+
+def print_battlefield_history(battlefield, show_ships, player):
+    print(f"The radar is picking up the following signal")
+    letter = "A"
+    for y in range(ROWS):
+        print_horizontal_separator()
+        print(f"| {letter} ", end="")
+        for x in range(COLUMNS):
+            CELL = battlefield[y][x]
+            real_value = CELL
+            if not show_ships and real_value != SEA and real_value != SHOT_MISSED and real_value != GOOD_SHOOT:
+                real_value = " "
+            print(f"| {real_value} ", end="")
+        letter = INCREMENT(letter)
+        print("|",)  # Line break
+    print_horizontal_separator()
+    print_line_with_numbers()
+    print_horizontal_separator()
+
 def history_mode():
     title()
     introduction_history_mode()
