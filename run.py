@@ -6,6 +6,14 @@ import sys
 ROWS = 5
 COLUMNS = 5
 SEA = " "
+DESTRUCTOR = "D"  # One Cell
+HEAVY = "H"  # Two cells
+CRUISER = "C"  # Cells
+SHOT_MISSED = "-"
+GOOD_SHOOT = "*"
+STARTING_SHELLS = 25
+P_1 = "Player 1"
+P_2 = "Player 2"
 LINE_BREAK = "\n" + str("-" * 80) + "\n"
 
 def print_slow(str):
@@ -27,6 +35,7 @@ def history_mode():
     title()
     introduction_history_mode()
     instructions_history_mode()
+    game()
 
 
 def introduction_history_mode():
@@ -74,9 +83,8 @@ def instructions_history_mode():
         "\n2. Select the grid COLUMN by choosing a LETTER\n" +
         "\n* If a ship is within the grid coordinates you have selected, " +
         "a hit will be \nregistered.",
-        "\n* If the grid is empty, it will be registered as a miss",
-        "\n* The size of the grid and the amount of shells you have " +
-        "will be determined by \n  the difficulty level you choose"
+        "\n* If the grid is empty, it will be registered as a miss"
+
     ]
     clear_screen()
     title()
@@ -86,6 +94,14 @@ def instructions_history_mode():
         print_slow(i)
     print(LINE_BREAK)
     continue_key()
+
+def game():
+    shells = 15
+    enemy_ships = 5
+    gamefield = get_initial_battlefield()
+    gamefield = print_ships()
+    
+
 
 def get_initial_battlefield():
     battlefield = []
@@ -129,8 +145,9 @@ def menu_options():
 def menu():
     while True:
         title()
+        print(LINE_BREAK)
         menu_options()
-        menu_selection = input("Please, choose an option: ")             
+        menu_selection = input("\nPlease, choose an option: ")            
         if menu_selection == "1":
             clear_screen()
             history_mode()
