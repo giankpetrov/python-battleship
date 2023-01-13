@@ -87,6 +87,12 @@ def print_line_with_numbers():
     for x in range(COLUMNS):
         print(f"| {x+1} ", end="")
     print("|")
+
+def if_sea(x, y, battlefield):
+    """
+    Let us know if there is SEA in the coordinates
+    """
+    return battlefield[y][x] == SEA
     
 def history_mode():
     title()
