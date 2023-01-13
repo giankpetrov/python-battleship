@@ -100,7 +100,46 @@ def coordinates_in_range(x, y):
     of the initial array for the battlefield
     """
     return x >= 0 and x <= COLUMNS-1 and y >= 0 and y <= ROWS-1
-    
+
+def print_ships(battlefield, ships_amount, player):
+    """
+    Base on initial amount of ships, fills the array with the ships
+    in their respective corrdenates
+    """
+    ships_one_cell = ships_amount-3
+    ships_two_vertical_cells = ships_amount-5
+    ships_two_horizontal_cells = ships_amount-4
+    if player == P_1:
+        print_slow("Placing ships for player 1 ")
+    else:
+        print_slow("Placing Ships for player 2 ")
+    print_slow(f"\nOne cell ships: {ships_one_cell}\nTwo cells vertically ships: {ships_two_vertical_cells}\nTwo cells horizontally ships: {ships_two_horizontal_cells}\nTotal ships: {ships_one_cell+ships_two_vertical_cells+ships_two_horizontal_cells}\n")
+    # First we put the 2 cells ships for better acommodation
+    battlefield = print_ships_two_cells_horizontally(
+        ships_two_horizontal_cells, HEAVY, battlefield)
+    battlefield = print_ships_two_cells_vertically(
+        ships_two_vertical_cells, CRUISER, battlefield)
+    battlefield = print_ships_one_cell(ships_one_cell, DESTRUCTOR, battlefield)
+    return battlefield
+
+def print_ships_history(battlefield, ships_amount, player):
+    """
+    Base on initial amount of ships, fills the array with the ships
+    in their respective corrdenates
+    """
+    ships_one_cell = ships_amount-3
+    ships_two_vertical_cells = ships_amount-5
+    ships_two_horizontal_cells = ships_amount-4
+    print_slow("The air force have identify the following ships:\n")
+    print_slow(f"\nOne cell ships: {ships_one_cell}\nTwo cells vertically ships: {ships_two_vertical_cells}\nTwo cells horizontally ships: {ships_two_horizontal_cells}\nTotal ships: {ships_one_cell+ships_two_vertical_cells+ships_two_horizontal_cells}\n")
+    # First we put the 2 cells ships for better acommodation
+    battlefield = print_ships_two_cells_horizontally(
+        ships_two_horizontal_cells, HEAVY, battlefield)
+    battlefield = print_ships_two_cells_vertically(
+        ships_two_vertical_cells, CRUISER, battlefield)
+    battlefield = print_ships_one_cell(ships_one_cell, DESTRUCTOR, battlefield)
+    return battlefield
+
 def history_mode():
     title()
     introduction_history_mode()
