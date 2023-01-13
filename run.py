@@ -16,6 +16,12 @@ P_1 = "Player 1"
 P_2 = "Player 2"
 LINE_BREAK = "\n" + str("-" * 80) + "\n"
 
+def title():
+    """
+    Prints the title of the game
+    """
+    print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
+
 def print_slow(str):
     for char in str:
         sys.stdout.write(char)
@@ -27,9 +33,6 @@ def print_slow_menu(str):
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(.1)
-
-def title():
-    print("\n <====>  BATTLESHIP: Guadalcanal 1942  <====>")
 
 def history_mode():
     title()
