@@ -436,7 +436,6 @@ def history_mode():
     instructions_history_mode()
     game_history_mode()
 
-
 def introduction_history_mode():
     """
     Provide background story for history mode
@@ -450,7 +449,7 @@ def introduction_history_mode():
         "\nThe Admiral has entrusted you with the command of the fleet. Sadly, after " +
         "the \nfirst encounter on November 13th, we have lost track of the enemy ships. " +
         "We know \nfrom intelligence reports Japanese Vice Admiral Kondo have a fleet of:\n"
-        "\n1 Battle Cruiser, that occupy 3 cells\n"
+        "\n1 Battle Cruiser, that occupy 2 cells\n"
         "2 Heavy Cruisers, that occupy 2 cells\n"
         "3 Destroyers that occupy 1 cell each\n"
     ]
@@ -459,11 +458,7 @@ def introduction_history_mode():
         print_slow(i)
     print(LINE_BREAK)
     continue_key()
-
-def continue_key():
-    input("Press Enter to continue...")
     
-
 def instructions_history_mode():
     """
     Intructions to play the game
