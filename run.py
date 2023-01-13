@@ -317,6 +317,16 @@ def request_coordinates_history(player):
             print("\n *** Please, choose a valid number")
     return x, y
 
+def shoot(x, y, battlefield) -> bool:
+    if if_sea(x, y, battlefield):
+        battlefield[y][x] = SHOT_MISSED
+        return False
+    elif battlefield[y][x] == SHOT_MISSED or battlefield[y][x] == GOOD_SHOOT:
+        return False
+    else:
+        battlefield[y][x] = GOOD_SHOOT
+        return True
+
 def history_mode():
     title()
     introduction_history_mode()
