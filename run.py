@@ -333,6 +333,16 @@ def oponent_current_player(player):
     else:
         return P_1
 
+def are_all_ships_sunk(battlefield):
+    for y in range(ROWS):
+        for x in range(COLUMNS):
+            CELL = battlefield[y][x]
+            # if its not SEA, GOOD SHOT or SHOT MISSED means there is still a ship alive
+            if CELL != SEA and CELL != GOOD_SHOOT and CELL != SHOT_MISSED:
+                return False
+    # if True we have been through all the array or battlefiel and all ships are sunk
+    return True
+
 def history_mode():
     title()
     introduction_history_mode()
