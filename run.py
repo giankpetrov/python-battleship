@@ -125,12 +125,7 @@ def print_ships(battlefield, ships_amount, player):
         print_slow("Placing ships for player 1 ")
     else:
         print_slow("Placing Ships for player 2 ")
-    print_slow(
-        f"\nOne cell ships: {ships_one_cell}" +
-        "\nTwo cells vertically ships: {ships_two_vertical_cells}" +
-        "\nTwo cells horizontally ships: {ships_two_horizontal_cells}" +
-        "\nTotal ships: " +
-        "{ships_one_cell+ships_two_vertical_cells+ships_two_horizontal_cells}")
+    print_slow(f"\nOne cell ships: {ships_one_cell} \nTwo cells vertically ships: {ships_two_vertical_cells} \nTwo cells horizontally ships: {ships_two_horizontal_cells}\nTotal ships: {ships_one_cell+ships_two_vertical_cells+ships_two_horizontal_cells}")
     # First we put the 2 cells ships for better acommodation
     battlefield = print_ships_two_cells_horizontally(
         ships_two_horizontal_cells, HEAVY, battlefield)
@@ -149,11 +144,7 @@ def print_ships_history(battlefield, ships_amount, player):
     ships_two_vertical_cells = ships_amount-5
     ships_two_horizontal_cells = ships_amount-4
     print_slow("The air force have identify the following ships:\n")
-    print_slow(
-        f"\nOne cell ships: {ships_one_cell}\nTwo cells vertically ships: " +
-        "{ships_two_vertical_cells}\nTwo cells horizontally ships: " +
-        "{ships_two_horizontal_cells}\nTotal ships: " +
-        "{ships_one_cell+ships_two_vertical_cells+ships_two_horizontal_cells}")
+    print_slow(f"\nOne cell ships: {ships_one_cell}\nTwo cells vertically ships: {ships_two_vertical_cells}\nTwo cells horizontally ships:{ships_two_horizontal_cells}\nTotal ships: {ships_one_cell+ships_two_vertical_cells+ships_two_horizontal_cells}")
     # First we put the 2 cells ships for better acommodation
     battlefield = print_ships_two_cells_horizontally(
         ships_two_horizontal_cells, HEAVY, battlefield)
