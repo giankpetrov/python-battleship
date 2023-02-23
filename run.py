@@ -548,7 +548,7 @@ def game_history_mode():
     clear_screen()
     title()
     print("\n======================")
-    shells_left_j1 = 2
+    shells_left_j1 = 20
     ships_amount = 6
     field_p2 = STARTING_BATTLEFIELD()
     field_p2 = print_ships_history(
