@@ -59,6 +59,13 @@ A flowchart is a graphical representation of a process or system that shows the 
 
 ![Introduction Screen](assets/introductionscreen.PNG "Introduction Screen") 
 
+- Introduction History Mode
+
+    - When the user selects the "History Mode" is presented with an introduction to the game in this mode. The text is presented with a typing effect to simulate a message is being receive in the console.
+    - In the introduction it makes clear the details of the computer ships
+
+![Introduction History Mode](assets/historymodeintroduction.PNG "Introduction History Mode")
+
 
 ## Credits
 
