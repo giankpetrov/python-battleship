@@ -8,6 +8,13 @@ On this project you will be able to play not only the multiplayer version (2 pla
 
 [Live link to website](https://battleship-guadalcanal-1942.herokuapp.com/)
 
+## UX & Design
+
+### Flowchart
+
+A flowchart is a graphical representation of a process or system that shows the steps or stages involved and the relationships between them. I created a flowchart to provide a visual representation of the steps that a user need to follow in order to achieve a particular goal, such as navigating through the application.
+
+![Flowchart](assets/flowchart.png "Flowchart")
 ## __Tech Stack__
 
 <img height="50" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png"> **VS Code**
