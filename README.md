@@ -39,6 +39,15 @@ A flowchart is a graphical representation of a process or system that shows the 
 
 ![Flowchart](assets/flowchart.png "Flowchart")
 
+### Modules
+
+- The [os](https://docs.python.org/3/library/os.html) module was used to create the clear_screen function to enhance user experience and reduce clutter on screen.
+
+- The [random](https://docs.python.org/3/library/random.html) module was used place the ships randomly across the board game.
+
+- The [time](https://docs.python.org/3/library/time.html) module was used for sleep() to create timers to get a smooth transition.
+
+- The [sys](https://docs.python.org/3/library/sys.html) module was used to create a typing effect when presenting the information on the console.
 ## Credits
 
 ### Concept
