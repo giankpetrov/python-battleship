@@ -48,6 +48,18 @@ A flowchart is a graphical representation of a process or system that shows the 
 - The [time](https://docs.python.org/3/library/time.html) module was used for sleep() to create timers to get a smooth transition.
 
 - The [sys](https://docs.python.org/3/library/sys.html) module was used to create a typing effect when presenting the information on the console.
+
+### Features
+
+- Introduction screen
+
+    - When the app loads the user is presented with a menu that allows a better and easy navigation
+
+    - The menu options are 2 play modes, information about the person who develop the app and exit option from the app
+
+![Introduction Screen](assets/introductionscreen.PNG "Introduction Screen") 
+
+
 ## Credits
 
 ### Concept
