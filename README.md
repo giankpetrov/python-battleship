@@ -152,6 +152,10 @@ A flowchart is a graphical representation of a process or system that shows the 
 - One of the valitadors used was CI Python Linter
 
 ![Code Institute Validator](assets/CI%20python%20linter.PNG "Code Institute Validator")
+
+## Deployment
+
+
 ## Credits
 
 ### Concept
@@ -166,7 +170,7 @@ A flowchart is a graphical representation of a process or system that shows the 
 ### Design
 
 - Tech Stack Icons [github.com/Marwin1991](https://github.com/marwin1991/profile-technology-icons)
-
+- Ideas to finish my README file from [adamgilroy22](https://github.com/adamgilroy22) and [cmikedev](https://github.com/cmikedev)
 ## Acknowledgement
 
 **[Harry Dhillon](https://github.com/Harry-Leepz)** for being my mentor on this project and provide excellent feedback from real work experience.
