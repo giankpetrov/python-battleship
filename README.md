@@ -140,6 +140,12 @@ A flowchart is a graphical representation of a process or system that shows the 
     - If a player miss the shot a dash "-" populate the coordate where it was shot.
 
 ![Multiplayer Miss](assets/multiplayermiss.PNG "Multiplayer Miss")
+
+- Multiplayer Second Turn
+
+    - When the second player start to play a message display the change of turn, with its respective remaining amunition and enemy board.
+
+![Multiplayer Second Turn](assets/multiplayersecondturn.PNG "Multiplayer Second Turn")
 ## Credits
 
 ### Concept
