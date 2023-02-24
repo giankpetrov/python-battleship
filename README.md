@@ -72,6 +72,12 @@ A flowchart is a graphical representation of a process or system that shows the 
 
 ![Instructions History Mode](assets/historymodeinstructions.PNG "Instructions History Mode")
 
+- Board Preparation
+
+    - Before the game start a message is displayed to the user following the history behind an historical fact followed by a description of the enemy fleet in this game mode against the computer
+
+![Board preparation History Mode](assets/historymodeboardpreparation.PNG "Board preparation History Mode")
+
 - Board Game 
 
     - An initial board game is created with enemy ships hidden
