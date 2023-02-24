@@ -155,6 +155,21 @@ A flowchart is a graphical representation of a process or system that shows the 
 
 ## Deployment
 
+Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser. This is to improve the accessibility of the project to others.
+
+The live deployed application can be found at [Battleship: Guadalcanal 1942](https://battleship-guadalcanal-1942.herokuapp.com/).
+
+### Local Deployment
+
+*Gitpod* IDE was used to write the code for this project.
+
+To make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
+- `git clone https://github.com/giankpetrov/python-battleship.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/giankpetrov/python-battleship)
+
 
 ## Credits
 
