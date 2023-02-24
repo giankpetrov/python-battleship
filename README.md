@@ -121,6 +121,12 @@ A flowchart is a graphical representation of a process or system that shows the 
     - In this section a message is displayed showing with details the ships places on each other player's board.
 
 ![Multiplayer board preparation](assets/multiplayerboardpreparation.PNG "Multiplayer board preparation")
+
+- Multiplayer First Turn
+
+    - In this section a message display the current player turn, remaining amunition and the grid from the opponent.
+
+![Multiplayer first turn](assets/multiplayerfirstturn.PNG "Multiplayer first turn")
 ## Credits
 
 ### Concept
