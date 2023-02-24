@@ -103,6 +103,13 @@ A flowchart is a graphical representation of a process or system that shows the 
     - When the user does not follow the instructions on how to select a ROW and a COLUMN to make a shot, a message is displayed to warn the user to select valid a valid option.
 
 ![Input Validation](assets/inputvalidation.PNG "Input validation")
+
+- History Mode defeat
+
+    - If the user lose the game a message is displayed together with all ships that were hidden during the game.
+
+![Defeat history mode](assets/historymodedefeat.PNG "Defeat history mode")
+
 ## Credits
 
 ### Concept
