@@ -79,6 +79,18 @@ A flowchart is a graphical representation of a process or system that shows the 
     - User is invited to guess coordinates 
 
 ![Board Game History Mode](assets/historymodeboardgame.PNG "Board Game History Mode")
+
+- Target Miss 
+
+    - When the user miss a shot a dash "-" populate the grid to indicate a failed shot
+
+![Target Miss](assets/historymodemiss.PNG "Target Miss History Mode")
+
+- Target Hit
+    
+    - When the user hit a ship an asterisk  "*" populate the grid to indicate a successful shot
+
+![Target Hit](assets/historymodehit.PNG "Target Hit History Mode")
 ## Credits
 
 ### Concept
