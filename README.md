@@ -97,6 +97,12 @@ A flowchart is a graphical representation of a process or system that shows the 
     - When the user hit a ship an asterisk  "*" populate the grid to indicate a successful shot
 
 ![Target Hit](assets/historymodehit.PNG "Target Hit History Mode")
+
+- Input Validation
+
+    - When the user does not follow the instructions on how to select a ROW and a COLUMN to make a shot, a message is displayed to warn the user to select valid a valid option.
+
+![Input Validation](assets/inputvalidation.PNG "Input validation")
 ## Credits
 
 ### Concept
