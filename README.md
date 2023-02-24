@@ -127,6 +127,12 @@ A flowchart is a graphical representation of a process or system that shows the 
     - In this section a message display the current player turn, remaining amunition and the grid from the opponent.
 
 ![Multiplayer first turn](assets/multiplayerfirstturn.PNG "Multiplayer first turn")
+
+- Multiplayer Hit
+
+    - If a player hit a ship an asterisk "*" populate the coordate where it was shot.
+
+![Multiplayer Hit](assets/multiplayerhit.PNG "Multiplayer Hit")
 ## Credits
 
 ### Concept
