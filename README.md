@@ -71,6 +71,14 @@ A flowchart is a graphical representation of a process or system that shows the 
     - The instructions are provided to the user to understand the rules of the game
 
 ![Instructions History Mode](assets/historymodeinstructions.PNG "Instructions History Mode")
+
+- Board Game 
+
+    - An initial board game is created with enemy ships hidden
+    - User can visualize the grid, amount of shells (turns) left.
+    - User is invited to guess coordinates 
+
+![Board Game History Mode](assets/historymodeboardgame.PNG "Board Game History Mode")
 ## Credits
 
 ### Concept
