@@ -146,6 +146,12 @@ A flowchart is a graphical representation of a process or system that shows the 
     - When the second player start to play a message display the change of turn, with its respective remaining amunition and enemy board.
 
 ![Multiplayer Second Turn](assets/multiplayersecondturn.PNG "Multiplayer Second Turn")
+
+## Code Validation
+
+- One of the valitadors used was CI Python Linter
+
+![Code Institute Validator](assets/CI%20python%20linter.PNG "Code Institute Validator")
 ## Credits
 
 ### Concept
