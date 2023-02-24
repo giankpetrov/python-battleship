@@ -207,3 +207,5 @@ The frontend terminal should now be connected and deployed to Heroku.
 ## Acknowledgement
 
 **[Harry Dhillon](https://github.com/Harry-Leepz)** for being my mentor on this project and provide excellent feedback from real work experience.
+
+Namaste ☸
