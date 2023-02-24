@@ -131,8 +131,15 @@ A flowchart is a graphical representation of a process or system that shows the 
 - Multiplayer Hit
 
     - If a player hit a ship an asterisk "*" populate the coordate where it was shot.
+    - A message is displayed to continue shooting.
 
-![Multiplayer Hit](assets/multiplayerhit.PNG "Multiplayer Hit")
+![Multiplayer Hit](assets/multiplayerhit.PNG "Multiplayer Hit").
+
+- Multiplayer Miss
+
+    - If a player miss the shot a dash "-" populate the coordate where it was shot.
+
+![Multiplayer Miss](assets/multiplayermiss.PNG "Multiplayer Miss")
 ## Credits
 
 ### Concept
