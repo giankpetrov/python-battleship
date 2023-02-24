@@ -110,6 +110,12 @@ A flowchart is a graphical representation of a process or system that shows the 
 
 ![Defeat history mode](assets/historymodedefeat.PNG "Defeat history mode")
 
+- Multiplayer Instructions
+
+    - As in History mode, here is displayed the instructions to the players
+
+![Defeat history mode](assets/multiplayerinstructions.PNG "Defeat history mode")
+
 ## Credits
 
 ### Concept
